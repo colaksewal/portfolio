@@ -1,0 +1,120 @@
+
+body{
+    margin:0 auto;
+    text-align:center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar{
+    background-color: black;
+    padding: 10px;
+}
+
+.navbar ul{
+    display: flex;
+    justify-content: space-around;
+    list-style-type:none;
+}
+
+.navbar li a{
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    display: flex;
+    justify-content: center; /* Section'ı yatayda ortala */
+    align-items: center; /* Section'ı dikeyde ortala */
+    height: 100%;
+}
+
+
+.left-side {
+    flex: 2; /* Sol tarafın genişliği */
+    padding: 20px;
+}
+
+.right-side {
+    flex: 3; /* Sağ tarafın genişliği */
+    padding: 20px;
+}
+
+.contact-form {
+    margin-bottom: 20px;
+}
+
+.social-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 20px;
+}
+
+.social-links li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-links li:last-child {
+    margin-right: 0;
+}
+
+.left-side img {
+    max-width: 100%;
+    height: auto;
+}
+
+.contact-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.contact-form textarea {
+    resize: vertical; /* Sadece dikey boyutu yeniden boyutlandırılabilir yapar */
+    min-height: 150px; /* Minimum yükseklik */
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
