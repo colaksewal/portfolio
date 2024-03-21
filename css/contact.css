@@ -1,8 +1,10 @@
 
-body{
-    margin:0 auto;
-    text-align:center;
+body {
+    margin: 0 auto;
+    text-align: center;
     font-family: Arial, Helvetica, sans-serif;
+    background: url('../image/background4-min.png') ;
+    background-size: cover; /* Arka plan resminin ekran boyutuna otomatik olarak uyum sağlamasını sağlar */
 }
 
 .navbar{
@@ -120,7 +122,7 @@ section {
 }
 
 footer {
-    color: black;
+    color: white;
     position: fixed; /* Sayfanın altında sabitlenmesini sağlar */
     bottom: 0; /* Sayfanın altına yaslar */
     width: 100%;
