@@ -2,8 +2,7 @@ body{
     margin:0 auto;
     text-align:center;
     font-family: Arial, Helvetica, sans-serif;
-    background: url('/image/background4-min.png');
-    background: url(/image/background4-min.png);
+    background: url('image/background4-min.png');
 }
 
 nav{
