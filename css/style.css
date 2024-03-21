@@ -1,0 +1,47 @@
+body{
+    margin:0 auto;
+    text-align:center;
+    background-color:#d6d3c4 ;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.home-page-div{
+    margin:0 auto;
+    text-align:center;
+    width:960px; 
+}
+
+.navbar{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 30px;
+
+}
+
+.navbar ul{
+    display: flex;
+    justify-content: space-between;
+    list-style-type:none;
+}
+
+.navbar li{
+    font-size: 16px;
+}
+
+.first-part button{
+    font-size: larger;
+    padding: 10px 20px;
+    background-color: aliceblue;
+    border: none ;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+.first-part h1{
+    font-size: 50px;
+}
+
+.name{
+    color: #7F56D9;
+}
