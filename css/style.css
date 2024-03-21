@@ -4,30 +4,29 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-
-.navbar{
+nav{
     background-color: black;
     padding: 10px;
 }
 
-.navbar ul{
+nav ul{
     display: flex;
     justify-content: space-around;
     list-style-type:none;
 }
 
-.navbar li a{
+nav li a{
     font-size: 16px;
     color: white;
     text-decoration: none;
 }
 
-.first-part {
+header {
     margin-top: 20px;
 }
 
-.first-part h1 {
-    margin-top: 20px;
+header h1 {
+    margin-top: -15px;
     font-size: 50px;
 }
 .name{
@@ -56,14 +55,21 @@ body{
 
 .picture-div {
     position: absolute;
-    top: 65px;
+    top: 75px;
     left: 50%;
     transform: translateX(-50%);
 }
-
 .pnegg-image {
     position: absolute;
     top: -209px;
     left: 50%;
     transform: translateX(-50%);
+}
+
+footer {
+    color: black;
+    position: fixed; /* Sayfanın altında sabitlenmesini sağlar */
+    bottom: 0; /* Sayfanın altına yaslar */
+    width: 100%;
+    margin: 0; /* Footer'ı genişliği boyunca yaymak için */
 }

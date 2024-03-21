@@ -118,3 +118,12 @@ section {
 .contact-form button:hover {
     background-color: #0056b3;
 }
+
+footer {
+    color: black;
+    position: fixed; /* Sayfanın altında sabitlenmesini sağlar */
+    bottom: 0; /* Sayfanın altına yaslar */
+    width: 100%;
+    margin: 0; /* Footer'ı genişliği boyunca yaymak için */
+}
+
