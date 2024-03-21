@@ -1,32 +1,29 @@
 body{
     margin:0 auto;
     text-align:center;
-    background-color:#d6d3c4 ;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .home-page-div{
     margin:0 auto;
     text-align:center;
-    width:960px; 
 }
 
 .navbar{
     background-color: black;
-    color: white;
     padding: 10px;
-    border-radius: 30px;
-
 }
 
 .navbar ul{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     list-style-type:none;
 }
 
-.navbar li{
+.navbar li a{
     font-size: 16px;
+    color: white;
+    text-decoration: none;
 }
 
 .first-part button{
