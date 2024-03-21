@@ -122,7 +122,7 @@ section {
 }
 
 footer {
-    color: black;
+    color: white;
     position: fixed; /* Sayfanın altında sabitlenmesini sağlar */
     bottom: 0; /* Sayfanın altına yaslar */
     width: 100%;
