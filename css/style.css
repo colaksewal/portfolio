@@ -26,19 +26,48 @@ body{
     text-decoration: none;
 }
 
-.first-part button{
-    font-size: larger;
-    padding: 10px 20px;
-    background-color: aliceblue;
-    border: none ;
+.first-part {
     margin-top: 20px;
-    border-radius: 20px;
 }
 
-.first-part h1{
+.first-part h1 {
+    margin-top: 20px;
     font-size: 50px;
 }
-
 .name{
     color: #7F56D9;
+}
+
+.vector2{
+ margin-right: 889px; 
+}
+
+.vector1{
+    margin-left: 303px;
+}
+
+.second-part{
+    
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+    
+}
+
+.middle-side {
+    position: relative;
+}
+
+.picture-div {
+    position: absolute;
+    top: 65px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.pnegg-image {
+    position: absolute;
+    top: -209px;
+    left: 50%;
+    transform: translateX(-50%);
 }
