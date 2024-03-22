@@ -98,3 +98,14 @@ footer {
     margin: 0; /* Footer'ı genişliği boyunca yaymak için */
 }
 
+.project-image {
+    width: 70%;
+    display: block;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    border-radius: 20px;
+}
+
