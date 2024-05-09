@@ -3,8 +3,7 @@ body {
     margin: 0 auto;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    background: url('../image/background4-min.png') ;
-    background-size: cover; /* Arka plan resminin ekran boyutuna otomatik olarak uyum sağlamasını sağlar */
+    background: url('../image/background.png') ;
 }
 
 
@@ -43,8 +42,17 @@ header p{
 }
 
 .name{
-    color: #d7c6fc;
+    color: #a78ddf;
 }
+
+
+.container {
+    width: 80%;
+    margin: 0 auto; 
+    text-align: center; 
+    position: relative;
+}
+
 
 
 .row {
@@ -57,8 +65,8 @@ header p{
 
 .col-card {
     position: relative;
-    width: 300px; /* Kart genişliği */
-    height: auto; /* Kart yüksekliği, içeriğe göre otomatik ayarlanır */
+    width: 300px; 
+    height: auto; 
     color:white;
 }
 
@@ -109,3 +117,45 @@ footer {
     border-radius: 20px;
 }
 
+
+.slider {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+/* Slides container */
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+    justify-content: space-around;
+}
+
+/* Individual slide */
+.slide {
+    flex: 0 0 20%;
+}
+
+/* Navigation buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px;
+    border: none;
+    outline: none;
+    z-index: 1000;
+    margin-top: -20px;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}

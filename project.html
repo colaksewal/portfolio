@@ -7,6 +7,11 @@
     <title>My Projects</title>
     <link rel="stylesheet" type="text/css" href="css/project.css">
     <link rel="shortcut icon" href="image/GeneticAlgorithm.png">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- jQuery UI -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
 
 <body>
@@ -20,39 +25,19 @@
     </div>
 
     <header>
-        <h1>My <span class= "name">Project</span></h1>
+        <h1>My <span class="name">Project</span></h1>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam, ex?</p>
     </header>
 
     <section>
         <div class="container">
-            <div class="row">
-                <div class="col-card">
-                    <p>Artifical Intelligence</p>
-                    <div class="card-div">
-                        <img src="image/Rectangle 6.png" alt="" width="300px">    
-                        <button class="rounded-button"> <i>OK</i> </button>
-                        <img class = "project-image" src="image/robot.png">
-                    </div>
+            <div class="slider">
+                <div class="slides">
+                    <!-- Slides will be dynamically generated here -->
                 </div>
-                <div class="col-card">
-                    <p>Web Applications</p>
-                    <div class="card-div">
-                        <img src="image/Rectangle 6.png" alt="" width="300px">    
-                        <button class="rounded-button"> <i>OK</i> </button>
-                        <img class = "project-image" src="image/website-codes.png">
-                    </div>
-                </div>
-                <div class="col-card">
-                    <p>Other Works</p>
-                    <div class="card-div">
-                        <img src="image/Rectangle 6.png" alt="" width="300px">    
-                        <button class="rounded-button"> <i>OK</i> </button>
-                        <img class = "project-image" src="image/developer.png">
-                    </div>
-                </div>
-
-                
+                <!-- Navigation buttons -->
+                <button class="prev">❮</button>
+                <button class="next">❯</button>
             </div>
         </div>
     </section>
@@ -60,7 +45,16 @@
     <footer>
         <p>2024 My Experience | All Rights Reserved</p>
     </footer>
+
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Project-specific JavaScript -->
+    <script type="text/javascript" src="js/project.js"></script>
+
+   
     
 </body>
-</html> 
 
+</html>

@@ -5,8 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href = "css/contact.css">
+    <link rel="stylesheet" href="css/contact.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- jQuery-UI Datepicker -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+    <!-- jQuery Validation Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
 
+    <script>
+        $(document).ready(function(){
+            // Datepicker
+            $('#datepicker').datepicker();
+
+            // Autocomplete
+            var availableInterests = ['AI', 'Security', 'Network', 'Game', 'Application'];
+            $('#interest').autocomplete({
+                source: availableInterests
+            });
+
+            // Form Validation
+            $('.contact-form').validate({
+                rules: {
+                    name: "required",
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    message: "required"
+                },
+                messages: {
+                    name: "Please enter your name",
+                    email: {
+                        required: "Please enter your email address",
+                        email: "Please enter a valid email address"
+                    },
+                    message: "Please enter your message"
+                },
+                submitHandler: function(form) {
+                    // Handle form submission, e.g., AJAX request
+                    // Display success message or perform other actions
+                    alert('Form submitted successfully!');
+                    form.reset(); // Reset the form after submission
+                }
+            });
+        });
+    </script>
 </head>
 <body>
     <div class="navbar">
@@ -24,34 +72,39 @@
         </div>
         <div class="right-side">
             <form class="contact-form" action="#" method="post">
-                <h2>İletişim Formu</h2>
+                <h2>Contact Form</h2>
                 <div>
-                    <label for="name">Adınız:</label>
+                    <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required>
                 </div>
                 <div>
-                    <label for="email">E-posta Adresiniz:</label>
+                    <label for="email">Email Address:</label>
                     <input type="email" id="email" name="email" required>
                 </div>
                 <div>
-                    <label for="message">Mesajınız:</label>
+                    <label for="interest">Interest:</label>
+                    <input type="text" id="interest" name="interest" required>
+                </div>
+                <div>
+                    <label for="datepicker">Date:</label>
+                    <input type="text" id="datepicker" name="date" required>
+                </div>
+                <div>
+                    <label for="message">Message:</label>
                     <textarea id="message" name="message" required></textarea>
                 </div>
-                <button type="submit">Gönder</button>
-                
-                <ul class="social-links">
+                <button type="submit">Send</button>
+            </form>
+            <ul class="social-links">
                 <li><a href="#">Facebook</a></li>
                 <li><a href="#">Twitter</a></li>
                 <li><a href="#">Instagram</a></li>
             </ul>
-            </form>
-            
         </div>
     </section>
 
     <footer>
         <p>2024 My Experience | All Rights Reserved</p>
     </footer>
-    
 </body>
 </html>
