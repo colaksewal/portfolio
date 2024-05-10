@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <!-- jQuery UI CSS -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!-- Custom CSS -->
+    <link rel = "stylesheet" href = "css/artificial-intelligence.css">
+</head>
+<body>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutme.html">About</a></li>
+        <li><a href="project.html">Project</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+    <h1>Portfolio</h1>
+    <div id="project-section">
+        <h2>My Project - Artificial Intelligence</h2>
+        <p>Here is some information about my project...</p>
+        <a href="#" id="show-comment-form">Leave a Comment</a>
+    </div>
+    <div id="comment-form" style="display: none;">
+        <h2>Leave a Comment</h2>
+        <form id="comment-form">
+            <div class="form-group">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="comment">Your Comment:</label>
+                <textarea id="comment" name="comment" rows="4" required></textarea>
+            </div>
+            <button type="submit">Submit Comment</button>
+        </form>
+    </div>
+    <div id="comments">
+        <!-- Comments will be dynamically added here -->
+    </div>
+</div>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- jQuery UI -->
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<!-- Custom JavaScript -->
+<script src = "js/artifical-intelligence.js"></script>
+
+</body>
+</html>

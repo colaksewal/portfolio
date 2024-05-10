@@ -39,17 +39,16 @@ $(document).ready(function () {
                         <div class="col-card">
                             <p>${card.title}</p>
                             <div class="card-div">
-                                <img src="image/Rectangle 6.png" alt="" width="300px">
-                                <button class="rounded-button open-modal" data-modal="myModal${index}"> <i>OK</i> </button>
-                                <img class="project-image" src="${card.image}">
+                                <a href="${card.title.replace(/\s+/g, '-').toLowerCase()}.html"> <!-- Link eklendi -->
+                                    <img src="image/Rectangle 6.png" alt="" width="300px">
+                                    <button class="rounded-button open-modal" data-modal="myModal${index}"> <i>OK</i> </button>
+                                    <img class="project-image" src="${card.image}">
+                                </a>
                             </div>
                         </div>
                     </div>`;
             });
             $('.slides').html(slideHTML);
-
-           
-           
         }
     }
 
@@ -98,4 +97,3 @@ $(document).ready(function () {
     // Initial slide
     slider.showSlide();
 });
-
