@@ -58,30 +58,20 @@ $(document).ready(function () {
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
         },
         {
-            title: "Web Applications",
-            image: "image/robot.png",
+            title: "Web Application",
+            image: "image/website-codes.png",
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
         },
         {
-            title: "Other Works",
+            title: "Mobile Application",
             image: "image/developer.png",
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
         },
         {
-            title: "Artificial Intelligence",
-            image: "image/robot.png",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        },
-        {
-            title: "Web Applications",
-            image: "image/girl.png",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        },
-        {
             title: "Other Works",
             image: "image/girl.png",
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        }
+        },
     ];
 
     var slider = new Slider(projects);

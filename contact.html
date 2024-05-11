@@ -15,46 +15,7 @@
     <!-- jQuery Validation Plugin -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-
-
-    <script>
-        $(document).ready(function(){
-            // Datepicker
-            $('#datepicker').datepicker();
-
-            // Autocomplete
-            var availableInterests = ['AI', 'Security', 'Network', 'Game', 'Application'];
-            $('#interest').autocomplete({
-                source: availableInterests
-            });
-
-            // Form Validation
-            $('.contact-form').validate({
-                rules: {
-                    name: "required",
-                    email: {
-                        required: true,
-                        email: true
-                    },
-                    message: "required"
-                },
-                messages: {
-                    name: "Please enter your name",
-                    email: {
-                        required: "Please enter your email address",
-                        email: "Please enter a valid email address"
-                    },
-                    message: "Please enter your message"
-                },
-                submitHandler: function(form) {
-                    // Handle form submission, e.g., AJAX request
-                    // Display success message or perform other actions
-                    alert('Form submitted successfully!');
-                    form.reset(); // Reset the form after submission
-                }
-            });
-        });
-    </script>
+    <script src = "js/contact.js"></script>
 </head>
 <body>
     <div class="navbar">
