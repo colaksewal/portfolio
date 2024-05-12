@@ -8,9 +8,10 @@ jQuery(document).ready(function () {
         
         // ### gallery content ### 
         items: [
-            { src: 'image/girl.png', srct: 'image/girl.png', title: 'Title 1' },
-            { src: 'path_to_your_image2.jpg', srct: 'path_to_your_thumbnail2.jpg', title: 'Title 2' },
-            { src: 'path_to_your_image3.jpg', srct: 'path_to_your_thumbnail3.jpg', title: 'Title 3' }
+            { src: 'image/topluluk1.png', srct: 'image/topluluk1.png', title: 'Title 1' },
+            { src: 'image/topluluk2.png', srct: 'image/topluluk2.png', title: 'Title 2' },
+            { src: 'image/topluluk3.png', srct: 'image/topluluk3.png', title: 'Title 3' }
+           
           ]
       });
 });

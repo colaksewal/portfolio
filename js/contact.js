@@ -24,7 +24,11 @@ $(document).ready(function(){
                 required: "Please enter your email address",
                 email: "Please enter a valid email address"
             },
-            message: "Please enter your message"
+            message:{
+                  required:"Please enter your message",
+                  message: "Please enter your message"
+            }
+          
         },
         submitHandler: function(form) {
             // Handle form submission, e.g., AJAX request
