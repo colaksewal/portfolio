@@ -4,22 +4,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background: url('../image/background.png') ;
 }
-nav{
-    background-color: black;
-    padding: 10px;
-}
 
-nav ul{
-    display: flex;
-    justify-content: space-around;
-    list-style-type:none;
-}
-
-nav li a{
-    font-size: 16px;
-    color: white;
-    text-decoration: none;
-}
 
 h1 {
     margin-top: 20px;

@@ -3,25 +3,9 @@ body {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     background: url('../image/background.png') ;
-    background-size: cover; /* Arka plan resminin ekran boyutuna otomatik olarak uyum sağlamasını sağlar */
 }
 
-nav{
-    background-color: black;
-    padding: 10px;
-}
 
-nav ul{
-    display: flex;
-    justify-content: space-around;
-    list-style-type:none;
-}
-
-nav li a{
-    font-size: 16px;
-    color: white;
-    text-decoration: none;
-}
 
 header {
     margin-top: 20px;
