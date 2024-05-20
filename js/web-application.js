@@ -23,4 +23,38 @@ $(document).ready(function() {
             $("#comment-form").slideUp();
         }
     });
+
+    
+    $.ajax({
+        url: "works/web-applicatione.json", // JSON dosyasının URL'si
+        type: "GET", // GET isteği
+        dataType: "json", // Veri türü: JSON
+        success: function(data) {
+            // AJAX isteği başarılı olduğunda yapılacak işlemler
+            $("#accordion h2:first-child").text(data.name); // Proje ismini başlık olarak ayarla
+            $("#accordion div:first-child p").text(data.description); // Proje açıklamasını paragraf olarak ayarla
+            $("#accordion div:first-child").append("<img src='" + data.image + "' alt='Project Image'>"); // Proje resmini ekle
+        },
+        error: function(xhr, status, error) {
+            // AJAX isteği başarısız olduğunda yapılacak işlemler
+            console.error(error); // Hata durumunda konsola hatayı yazdır
+        }
+    });
+
+    // Hareketli butonun tıklanma işlemi
+    $("#move-button").click(function() {
+        $.ajax({
+            url: "https://www.google.com.tr/?hl=tr",
+            type: "GET",
+            success: function() {
+                window.location.href = "https://www.google.com";
+            },
+            error: function(xhr, status, error) {
+                console.error(error);
+                window.location.href = "https://www.google.com";
+            }
+        });
+    });
+
+
 });
