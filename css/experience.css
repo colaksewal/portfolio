@@ -5,13 +5,18 @@ body {
     background: url('../image/background.png') ;
 }
 
-
 h1 {
     margin-top: 20px;
     font-size: 50px;
+    text-align: center;
+
 }
 .name{
     color: #7F56D9;
+}
+
+.text-center{
+    margin-top: 50px;
 }
 
 #activities {

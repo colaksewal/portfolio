@@ -10,7 +10,6 @@ header {
 }
 
 header h1 {
-    margin-top: -15px;
     font-size: 50px;
     color: white;
 }
@@ -33,26 +32,60 @@ header h1 {
     margin-top: 20px;
 }
 
-.middle-side {
-    position: relative;
-}
 
 .left-side p {
     color: white;
 }
 
-.picture-div {
-    position: absolute;
-    top: 75px;
-    left: 50%;
-    transform: translateX(-50%);
+.right-side .contact-link {
+    color: white;
+    cursor: pointer;
 }
 
-.pnegg-image {
-    position: absolute;
-    top: -209px;
-    left: 50%;
-    transform: translateX(-50%);
+
+.middle-side .center-image {
+    width: 100%; /* Resmin genişliği */
+    max-width: 500px; /* Maksimum genişlik */
+    height: auto; /* Otomatik yükseklik */
+    display: block; /* Blok olarak görüntüle */
+    margin: -139px auto;
+}
+
+/* Mobil cihazlarda düzeni düzeltmek için medya sorguları */
+@media (max-width: 768px) {
+    .second-part {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .left-side, .right-side, .middle-side {
+        margin-bottom: 20px;
+    }
+
+    .middle-side .center-image {
+        max-width: 100%;
+    }
+}
+
+
+.arrow {
+    width: 30px;
+    height: 30px;
+    margin: 10px auto;
+    display: block;
+}
+
+.move-arrow {
+    animation: move 1s infinite alternate;
+}
+
+@keyframes move {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
 }
 
 footer {
