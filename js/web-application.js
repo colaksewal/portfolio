@@ -44,14 +44,14 @@ $(document).ready(function() {
     // Hareketli butonun tıklanma işlemi
     $("#move-button").click(function() {
         $.ajax({
-            url: "https://www.google.com.tr/?hl=tr",
+            url: "https://github.com/ezgisubasii/?hl=tr",
             type: "GET",
             success: function() {
-                window.location.href = "https://www.google.com";
+                window.location.href = "https://github.com/ezgisubasii";
             },
             error: function(xhr, status, error) {
                 console.error(error);
-                window.location.href = "https://www.google.com";
+                window.location.href = "https://github.com/ezgisubasii";
             }
         });
     });

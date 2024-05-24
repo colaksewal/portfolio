@@ -1,8 +1,8 @@
 $(document).ready(function() {
-    // "Leave a Comment" bağlantısını tıklayınca formu göster
+    // Show the comment form when "Leave a Comment" link is clicked
     $("#show-comment-form").click(function(e) {
         e.preventDefault();
-        $("#comment-form").slideDown();
+        $("#comment-form").slideToggle();
     });
 
     // Handle form submission with validation
@@ -11,7 +11,7 @@ $(document).ready(function() {
             var name = $("#name").val();
             var comment = $("#comment").val();
 
-            var newComment = $("<div>").addClass("comment");
+            var newComment = $("<div>").addClass("comment mt-2");
             $("<p>").text(comment).appendTo(newComment);
             $("<span>").text("- " + name).appendTo(newComment);
 
@@ -24,34 +24,49 @@ $(document).ready(function() {
         }
     });
 
+    // Load project details from a JSON file
     $.ajax({
-        url: "works/artificial-intellegence.json", // JSON dosyasının URL'si
-        type: "GET", // GET isteği
-        dataType: "json", // Veri türü: JSON
+        url: "works/artificial-intelligence.json", // JSON file URL
+        type: "GET", // GET request
+        dataType: "json", // Data type: JSON
         success: function(data) {
-            // AJAX isteği başarılı olduğunda yapılacak işlemler
-            $("#accordion h2:first-child").text(data.name); // Proje ismini başlık olarak ayarla
-            $("#accordion div:first-child p").text(data.description); // Proje açıklamasını paragraf olarak ayarla
-            $("#accordion div:first-child").append("<img src='" + data.image + "' alt='Project Image'>"); // Proje resmini ekle
+            // Update the accordion with project details
+            $("#accordion h2:first-child").text(data.name); // Set project name as the title
+            $("#accordion div:first-child p").text(data.description); // Set project description
+            if (data.image) {
+                $("#accordion div:first-child").append("<img src='" + data.image + "' alt='Project Image' class='img-fluid mt-2'>"); // Add project image if available
+            }
         },
         error: function(xhr, status, error) {
-            // AJAX isteği başarısız olduğunda yapılacak işlemler
-            console.error(error); // Hata durumunda konsola hatayı yazdır
+            // Handle errors in AJAX request
+            console.error("Error loading project details: ", error);
         }
     });
 
-    // Hareketli butonun tıklanma işlemi
+    // Handle the "Move to External Website" button click
     $("#move-button").click(function() {
         $.ajax({
-            url: "https://www.google.com.tr/?hl=tr",
+            url: "https://www.kaggle.com/ezgiisubasii/?hl=tr",
             type: "GET",
             success: function() {
-                window.location.href = "https://www.google.com";
+                window.location.href = "https://www.kaggle.com/ezgiisubasii";
             },
             error: function(xhr, status, error) {
-                console.error(error);
-                window.location.href = "https://www.google.com";
+                console.error("Error during redirection: ", error);
+                window.location.href = "https://www.kaggle.com/ezgiisubasii";
             }
         });
+    });
+
+    // Initialize NanoGallery2
+    $("#nanogallery2").nanogallery2({
+        thumbnailHeight: 150,
+        thumbnailWidth: 150,
+        itemsBaseURL: '', // Leave empty because we are using local files
+        items: [
+            { src: 'image/topluluk1.png', srct: 'image/topluluk1.png', title: 'Title 1' },
+            { src: 'image/topluluk2.png', srct: 'image/topluluk2.png', title: 'Title 2' },
+            { src: 'image/topluluk3.png', srct: 'image/topluluk3.png', title: 'Title 3' }
+        ]
     });
 });

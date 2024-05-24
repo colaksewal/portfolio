@@ -3,39 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-
+    <title>Portfolio - Artificial Intelligence</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <!-- jQuery UI CSS -->
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/artificial-intelligence.css">
-    <script src="js/navbar.js"></script>
-    <link rel="stylesheet" href = "css/navbar.css">
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/mobile-application.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    
+    <!-- JavaScript files -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
- 
+    <script src="js/navbar.js"></script>
 
-
+    <!-- NanoGallery2 -->
+    <link href="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/css/nanogallery2.min.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/jquery.nanogallery2.min.js"></script>
 </head>
 <body>
-    
-<div id="navbar-placeholder"></div>
-    
 
-<div class="container">
+<div id="navbar-placeholder"></div>
+
+<div class="container mt-4">
     <h1>Portfolio</h1>
     <div id="accordion">
         <h2>My Project - Artificial Intelligence</h2>
         <div>
-            <p>Here is some information about my project...</p>
+            <p>I am interested in Artificial Intelligence. At present, I am working on large language models. I improve myself in LLM algorithms.</p>
             <a href="#" id="show-comment-form">Leave a Comment</a>
         </div>
         <h2>Comments</h2>
@@ -48,31 +45,103 @@
         <form id="comment-form-validation">
             <div class="form-group">
                 <label for="name">Your Name:</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name" required class="form-control">
             </div>
             <div class="form-group">
                 <label for="comment">Your Comment:</label>
-                <textarea id="comment" name="comment" rows="4" required></textarea>
+                <textarea id="comment" name="comment" rows="4" required class="form-control"></textarea>
             </div>
-            <button type="submit">Submit Comment</button>
+            <button type="submit" class="btn btn-primary mt-2">Submit Comment</button>
         </form>
-
-
     </div>
-
-    <button id="move-button">Move to External Website</button>
-
+    <!-- NanoGallery2 Placeholder -->
+    <h2>My Project Gallery</h2>
+    <div id="nanogallery2" class="mt-4"></div>
 </div>
+<button id="move-button">Move to External Website</button>
 
-<!-- jQuery -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <!-- jQuery UI -->
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 <!-- jQuery Validation -->
 <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
 <!-- Custom JavaScript -->
-<script src="js/artifical-intelligence.js"></script>
+<script src="js/artificial-intelligence.js"></script>
 
+<script>
+    $(document).ready(function() {
+    // Show the comment form when "Leave a Comment" link is clicked
+    $("#show-comment-form").click(function(e) {
+        e.preventDefault();
+        $("#comment-form").slideToggle();
+    });
+
+    // Handle form submission with validation
+    $("#comment-form-validation").validate({
+        submitHandler: function(form) {
+            var name = $("#name").val();
+            var comment = $("#comment").val();
+
+            var newComment = $("<div>").addClass("comment mt-2");
+            $("<p>").text(comment).appendTo(newComment);
+            $("<span>").text("- " + name).appendTo(newComment);
+
+            $("#comments").append(newComment);
+
+            $("#name").val("");
+            $("#comment").val("");
+
+            $("#comment-form").slideUp();
+        }
+    });
+
+    // Load project details from a JSON file
+    $.ajax({
+        url: "works/artificial-intelligence.json", // JSON file URL
+        type: "GET", // GET request
+        dataType: "json", // Data type: JSON
+        success: function(data) {
+            // Update the accordion with project details
+            $("#accordion h2:first-child").text(data.name); // Set project name as the title
+            $("#accordion div:first-child p").text(data.description); // Set project description
+            if (data.image) {
+                $("#accordion div:first-child").append("<img src='" + data.image + "' alt='Project Image' class='img-fluid mt-2'>"); // Add project image if available
+            }
+        },
+        error: function(xhr, status, error) {
+            // Handle errors in AJAX request
+            console.error("Error loading project details: ", error);
+        }
+    });
+
+    // Handle the "Move to External Website" button click
+    $("#move-button").click(function() {
+        $.ajax({
+            url: "https://www.kaggle.com/ezgiisubasii/?hl=tr",
+            type: "GET",
+            success: function() {
+                window.location.href = "https://www.kaggle.com/ezgiisubasii";
+            },
+            error: function(xhr, status, error) {
+                console.error("Error during redirection: ", error);
+                window.location.href = "https://www.kaggle.com/ezgiisubasii";
+            }
+        });
+    });
+
+    // Initialize NanoGallery2
+    $("#nanogallery2").nanogallery2({
+        thumbnailHeight: 150,
+        thumbnailWidth: 150,
+        itemsBaseURL: '', // Leave empty because we are using local files
+        items: [
+            { src: 'image/ai-image1.png', srct: 'image/ai-image1.png', title: 'Title 1' },
+            { src: 'image/ai-image2.png', srct: 'image/ai-image2.png', title: 'Title 2' },
+            { src: 'image/ai-image3.png', srct: 'image/ai-image3.png', title: 'Title 3' }
+        ]
+    });
+});
+
+</script>
 
 </body>
 </html>
