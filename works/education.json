@@ -1,0 +1,16 @@
+{
+    "education": [
+        {
+            "school": "Çankaya Bilgi High School",
+            "years": "2015-2019"
+        },
+        {
+            "school": "Ankara Yıldırım Beyazıt University",
+            "years": "2020-2025"
+        },
+        {
+            "school": "ReportQL-Internship",
+            "years": "2024-"
+        }
+    ]
+}
