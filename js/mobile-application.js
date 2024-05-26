@@ -58,9 +58,9 @@ $(document).ready(function() {
         thumbnailWidth: 150,
         itemsBaseURL: '', // Leave empty because we are using local files
         items: [
-            { src: 'image/ai-image1.png', srct: 'image/ai-image1.png', title: 'Title 1' },
-            { src: 'image/ai-image2.png', srct: 'image/ai-image2.png', title: 'Title 2' },
-            { src: 'image/ai-image3.png', srct: 'image/ai-image3.png', title: 'Title 3' }
+            { src: 'image/mobil1.png', srct: 'image/mobil1.png', title: 'Title 1' },
+            { src: 'image/mobil2.png', srct: 'image/mobil2.png', title: 'Title 2' }
+            
         ]
     });
 });
