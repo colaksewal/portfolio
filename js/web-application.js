@@ -58,8 +58,8 @@ $(document).ready(function() {
         thumbnailWidth: 150,
         itemsBaseURL: '', // Leave empty because we are using local files
         items: [
-            { src: 'image/web1.png', srct: 'image/web1.png', title: 'Title 1' },
-            { src: 'image/web2.png', srct: 'image/web2.png', title: 'Title 2' }
+            { src: 'image/web1.png', srct: 'image/web1.png', title: 'Image 1' },
+            { src: 'image/web2.png', srct: 'image/web2.png', title: 'Image 2' }
             
         ]
     });

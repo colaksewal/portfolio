@@ -11,9 +11,9 @@ $(document).ready(function() {
         
         // ### gallery content ### 
         items: [
-            { src: 'image/topluluk1.png', srct: 'image/topluluk1.png', title: 'Title 1' },
-            { src: 'image/topluluk2.png', srct: 'image/topluluk2.png', title: 'Title 2' },
-            { src: 'image/topluluk3.png', srct: 'image/topluluk3.png', title: 'Title 3' }
+            { src: 'image/topluluk1.png', srct: 'image/topluluk1.png', title: 'Image 1' },
+            { src: 'image/topluluk2.png', srct: 'image/topluluk2.png', title: 'Image 2' },
+            { src: 'image/topluluk3.png', srct: 'image/topluluk3.png', title: 'Image 3' }
            
           ]
       });
